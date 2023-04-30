@@ -1,17 +1,17 @@
 {% extends "base_page.html" %}
 
 {% block page-title %}
-Математика и её термины
+Словарь английских терминов
 {% endblock %}
 
 {% block page-lead %}
-Это страничка проекта про изучение математики. <br/>
-Этот проект и его исходный код можно использовать как reference или источник вдохновения для своего проекта.
+Данная страница - интерактивный словарь  <br/>
 {% endblock %}
+}
 
 {% block content %}
 <div class="container px-4 py-5" id="project-contents">
-    <h2 class="pb-2 border-bottom">Что есть в этом проекте</h2>
+    <h2 class="pb-2 border-bottom">Опции</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="col d-flex">
             <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
@@ -19,7 +19,14 @@
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
             </div>
-            <div>
+            <div
+              class="bg-success p-2"
+              style="bg-opacity-10;
+                    background-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%), url('https://img.freepik.com/premium-vector/london-city-scene-with-telephone-line-big-ben-architecture-hand-drawn-illustration_511296-272.jpg?w=1060');
+                    background-repeat: no-repeat;
+                    background-size: cover
+                    "
+            >
                 <h3 class="fs-2">Список терминов</h3>
                 <p>Простая страница с контентом, который разложен в таблицу. Содержимое таблицы находится в текстовом
                     файле (если вы уверенно себя чувствуете, замените текстовый файл на базу данных).</p>
@@ -32,7 +39,16 @@
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
             </div>
-            <div>
+            <div
+                    class="bg-success p-2"
+                    style="bg-opacity-10;
+                        background-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%), url('https://img.freepik.com/premium-vector/london-city-scene-with-telephone-line-big-ben-architecture-hand-drawn-illustration_511296-272.jpg?w=1060');
+                        background-repeat: no-repeat;
+                        background-size: cover
+
+                        "
+
+            >
                 <h3 class="fs-2">Форма для заполнения термина</h3>
                 <p>Пример POST-запроса, который отправится после того, как вы заполните форму. Он допишет термин в ваш
                     текстовый файл, и если всё будет успешно — вас перенаправят на страницу терминов</p>
@@ -47,7 +63,16 @@
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
             </div>
-            <div>
+            <div
+                    class="bg-success p-2"
+                    style="bg-opacity-10;
+                        background-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%), url('https://img.freepik.com/premium-vector/london-city-scene-with-telephone-line-big-ben-architecture-hand-drawn-illustration_511296-272.jpg?w=1060');
+                        background-repeat: no-repeat;
+                        background-size: cover
+
+                        "
+
+            >
                 <h3 class="fs-2">Статистика</h3>
                 <p>Сколько терминов уже есть? Какой они длины?</p>
                 <a href="/stats" class="btn btn-primary">

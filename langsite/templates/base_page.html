@@ -2,31 +2,43 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+
     <title>{% block pagetitle %}{% endblock %}</title>
     <!-- load static -->
     {% load static %}
     <!-- CSS -->
     <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
 </head>
+
 <body>
 <main>
-    <div class="container">
+    <div class="col-lg-8 mx-auto p-4 py-md-5">
         <header class="border-bottom">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <div class="fs-2 mb-3">
-                    <img src="{% static 'book.svg' %}" alt="Проект про изучение иностранных языков" width="32" height="32"/>
-                    <span>Проект про изучение иностранных языков</span>
+                    <img src="{% static 'book.svg' %}" alt="Проект про математику" width="32" height="32"/>
+                    <span>Проект по изучению английского языка</span>
                 </div>
             </a>
         </header>
-        <div class="p-5 mb-4 bg-light rounded-3" id="title-box">
+
+        <div class="bg-image p-5 text-left shadow-1-strong rounded mb-5 text-black" id="title-box"
+            style="background-image: url('https://img.freepik.com/free-photo/headphones-notepad-pen_23-2147843238.jpg?t=st=1682873565~exp=1682874165~hmac=9c61b96c5e4fb39102fe8d99cf4c02976968f2f02cb1ae66c606f0a940092f88');
+            background-repeat: no-repeat;
+            background-size: cover
+            "
+        >
             <div class="container-fluid py-5">
                 <h1 class="display-1 fw-bold">{% block page-title %}{% endblock %}</h1>
                 <p class="col-md-8 fs-4">{% block page-lead %}{% endblock %}</p>
             </div>
         </div>
+
         {% block content %}{% endblock %}
-        <footer class="footer pt-3 mt-4 text-muted border-top">© 2023</footer>
+        <footer class="footer pt-3 mt-4 text-muted border-top">© 2023
+        </footer>
     </div>
 </main>
 </body>
