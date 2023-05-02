@@ -6,7 +6,7 @@
 * изучение новых слов
 
 Вид стартовой страницы: 
-![image](https://user-images.githubusercontent.com/83416875/235691914-0a391329-e31d-4d0f-bf52-922dd59fd036.png)
+![image](https://user-images.githubusercontent.com/83416875/235696941-02302d4c-792c-4b5d-8694-1c5efa039dd3.png)
 
 # Описание функционала
 
@@ -27,7 +27,8 @@
 ## Заучивание
 
 * выбор слов для заучивания (!нельзя выбрать 0 слов!)
-<img src="https://user-images.githubusercontent.com/83416875/235695451-9ce90eb9-c3f6-4b30-9344-b72c1fa6286f.png" width=60%>
+
+<img src="https://user-images.githubusercontent.com/83416875/235697102-ae706fa8-baf5-418a-a322-d7609e359832.png" width=60%>
 
 * флэш-карточки выбранных слов
 <img src="https://user-images.githubusercontent.com/83416875/235695825-6e179c34-33dc-4e3c-b264-3da3f9917cb0.png" width=60%>
