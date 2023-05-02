@@ -26,7 +26,9 @@ urlpatterns = [
     path('add-term', views.add_term),
     path('send-term', views.send_term),
     path('stats', views.show_stats),
-    path('term-flashcards', views.term_flashcards)
+    path('term-flashcards', views.term_flashcards),
+    path('select-term-flashcards', views.select_term_flashcards)
+
 
 
 ]

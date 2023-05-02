@@ -11,7 +11,7 @@
 
 {% block content %}
 <div class="container px-4 py-5" id="project-contents">
-    <h2 class="pb-2 border-bottom">Опции</h2>
+    <h2 class="pb-2 border-bottom">Словарь</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="col d-flex">
             <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
@@ -28,7 +28,7 @@
                     "
             >
                 <h3 class="fs-2">Словарь</h3>
-                <p>Здесь находится словарь добавленных слов</p>
+                <p>Здесь находится таблица добавленных слов</p>
                 <a href="/terms-list" class="btn btn-primary">Посмотреть</a>
             </div>
         </div>
@@ -48,8 +48,7 @@
                         "
 
             >
-                <h3 class="fs-2">Форма для добавления слова</h3>
-                <p>Тут можно добавить слово в словарь</p>
+                <h3 class="fs-2">Форма для добавления нового слова</h3>
                 <a href="/add-term" class="btn btn-primary">
                     Добавить
                 </a>
@@ -78,7 +77,9 @@
                 </a>
             </div>
         </div>
-
+    </div>
+    <h2 class="pb-2 border-bottom">Заучивание</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="col d-flex">
             <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                 <svg class="bi" width="1em" height="1em">
@@ -95,7 +96,29 @@
                         "
 
             >
-                <h3 class="fs-2">Просмотр интерактивных карточек</h3>
+                <h3 class="fs-2">Выбор слов для флэш-карт</h3>
+                <a href="/select-term-flashcards" class="btn btn-primary">
+                    Выбрать
+                </a>
+            </div>
+        </div>
+        <div class="col d-flex">
+            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg class="bi" width="1em" height="1em">
+                    <use xlink:href="#cpu-fill"></use>
+                </svg>
+            </div>
+            <div
+                    class="bg-success p-2"
+                    style="bg-opacity-10;
+                        background-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%), url('https://img.freepik.com/premium-vector/london-city-scene-with-telephone-line-big-ben-architecture-hand-drawn-illustration_511296-272.jpg?w=1060');
+                        background-repeat: no-repeat;
+                        background-size: cover
+
+                        "
+
+            >
+                <h3 class="fs-2">Просмотр флэш-карт</h3>
                 <p>Тут можно выучить слова</p>
                 <a href="/term-flashcards" class="btn btn-primary">
                     Учить
@@ -103,47 +126,6 @@
             </div>
         </div>
     </div>
-    <h2 class="pb-2 border-bottom">Что можете сделать вы?</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Добавить ещё одну форму</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>Чтобы получить максимальную оценку по проекту, нужно две страницы, которые <span class="fst-italic">показывают</span>
-            контент, а две страницы, которые <span class="fst-italic">принимают</span> контент. Одна страница с
-            POST-запросом создана — это <a href="/add-term">форма сбора терминов</a>. Добавьте ещё одну форму и view, обрабатывающий её!</p>
-        </div>
-    </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Разнообразить контент</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>Этот проект — про математику. В условии проекта в курсе — иностранные языки. Измените содержимое страниц,
-                чтобы они были полезны в контексте изучения иностранного языка (несколько примеров есть в описании проекта).</p>
-        </div>
-    </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Изменить вёрстку и/или дизайн-систему</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>Этот проект использует <a href="https://getbootstrap.com">Bootstrap</a>. Попробуйте другие дизайн-системы, например:
-                <ul>
-                    <li><a href="https://materializecss.com">Materialize</a></li>
-                    <li><a href="https://semantic-ui.com">Semantic UI</a></li>
-                    <li><a href="https://get.foundation/templates.html">Foundation</a></li>
-                </ul>
-            </p>
-            <p>
-                Если же вам хочется оставить Bootstrap — измените вёрстку! Добавьте картинок, замените стили — словом, пробудите
-                внутреннего художника.
-            </p>
-            <p>
-                <span class="fst-italic">Вариант улучшения:</span> как правило, у сайта есть фавикон — маленькая иконка, отображающаяся
-                рядом с названием сайта во вкладке или окне браузера. Сейчас её нет — но вы можете её добавить.
-            </p>
-        </div>
-    </div>
 </div>
+
 {% endblock %}

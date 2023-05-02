@@ -1,0 +1,29 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+{% if success %}
+Термины выбраны
+{% else %}
+Ошибка выбора терминов
+{% endif %}
+{% endblock %}
+
+{% block page-lead %}{% endblock %}
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="term-form-result">
+    <h2 class="pb-2 border-bottom">Результат запроса</h2>
+    <p>Запрос завершился <span class="fw-bold">{% if success %}успешно{% else %}ошибкой{% endif %}</span>.
+    </p>
+
+    <h2 class="pb-2 border-bottom">Комментарий</h2>
+    <p>{{ comment }}</p>
+
+    <h2 class="pb-2 border-bottom">Что можно сделать?</h2>
+    <ul>
+        <li>приступить к <a href="/term-flashcards">изучению</a> терминов,</li>
+        <li><a href="/select-term-flashcards">выбрать</a> термины еще раз</li>
+        <li>вернуться на <a href="/">главную</a></li>
+    </ul>
+</div>
+{% endblock %}

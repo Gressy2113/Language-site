@@ -48,3 +48,24 @@ def term_flashcards(request):
     terms = terms_work.get_terms_for_flashcards()
     return render(request, "term_flashcards.html", context={"terms": terms})
 
+def select_term_flashcards(request):
+    if request.method == "POST":
+        cache.clear()
+        user_name = request.POST.get("name")
+        id_checked = request.POST.getlist('list_gap')
+        #checked_instances = Model.objects.filter(id__in=checked_data)
+        print(id_checked)
+        context = {"user": user_name}
+        if len(id_checked) == 0:
+            context["success"] = False
+            context["comment"] = "Необходимо выбрать хотя бы один термин для заучивания"
+        else:
+            context["success"] = True
+            context["comment"] = "Термины выбраны"
+            terms_work.write_selected_term(id_checked)
+        return render(request, "select_term_request.html", context=context)
+    else:
+        terms = terms_work.get_terms_for_table()
+        return render(request, "select_term_flashcards.html", context={"terms": terms})
+
+

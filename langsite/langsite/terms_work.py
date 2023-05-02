@@ -11,7 +11,7 @@ def get_terms_for_table():
 
 def get_terms_for_flashcards():
     terms = []
-    with open("./data/terms.csv", "r", encoding="utf-8") as f:
+    with open("./data/terms_selected.csv", "r", encoding="utf-8") as f:
         i, j = 0, 0
         for line in f.readlines()[1:]:
             if i == 0:
@@ -37,6 +37,18 @@ def write_term(new_term, new_transcription, new_translation):
     new_terms = [title] + terms_sorted
     with open("./data/terms.csv", "w", encoding="utf-8") as f:
         f.write("\n".join(new_terms))
+
+def write_selected_term(ids):
+    ids = [int(id) for id in ids]
+    with open("./data/terms.csv", "r", encoding="utf-8") as f:
+        with open("./data/terms_selected.csv", "w", encoding="utf-8") as fw:
+            lines = f.readlines()
+            fw.write(lines[0])
+            for id in ids:
+                fw.write(lines[id])
+
+
+
 
 
 def get_terms_stats():
