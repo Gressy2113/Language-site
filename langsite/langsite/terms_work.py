@@ -4,7 +4,7 @@ def get_terms_for_table():
         cnt = 1
         for line in f.readlines()[1:]:
             print(line)
-            term, transcription, translation = line.split(";")
+            term, transcription, translation, user = line.split(";")
             terms.append([cnt, term, transcription, translation])
             cnt += 1
     return terms
@@ -16,7 +16,7 @@ def get_terms_for_flashcards():
         for line in f.readlines()[1:]:
             if i == 0:
                 terms.append([])
-            term, transcription, translation = line.split(";")
+            term, transcription, translation, user = line.split(";")
             terms[i].append([term, transcription, translation])
             j += 1
             if j == 4:
@@ -26,8 +26,8 @@ def get_terms_for_flashcards():
 
 
 
-def write_term(new_term, new_definition):
-    new_term_line = f"{new_term};{new_definition};user"
+def write_term(new_term, new_transcription, new_translation, user):
+    new_term_line = f"{new_term};{new_transcription};{new_translation};{user}"
     with open("./data/terms.csv", "r", encoding="utf-8") as f:
         existing_terms = [l.strip("\n") for l in f.readlines()]
         title = existing_terms[0]

@@ -1,5 +1,6 @@
-word;transcription;translation
-cat;kæt;кошка
-dog;dɒɡ ;собака
-cow;;корова
-elephant;;слон
+word;transcription;translation;sourse
+cat;kæt;кошка;db
+cow;;корова;db
+dog;dɒɡ ;собака;db
+elephant;;слон;db
+rat;;крыса;Ира
