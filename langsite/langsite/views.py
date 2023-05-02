@@ -32,7 +32,7 @@ def send_term(request):
         else:
             context["success"] = True
             context["comment"] = "Ваш термин принят"
-            terms_work.write_term(new_term, new_transcription, new_translation, user_name)
+            terms_work.write_term(new_term, new_transcription, new_translation)
         if context["success"]:
             context["success-title"] = ""
         return render(request, "term_request.html", context)

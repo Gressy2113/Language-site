@@ -1,13 +1,9 @@
 {% extends "base_page.html" %}
 
 {% block page-title %}
-Статистика по терминам
+Статистика по словарю
 {% endblock %}
 
-{% block page-lead %}
-Перед тем, как отрендерить эту страницу, веб-приложение ходит в файл/БД, обновляет статистики, а затем подставляет их в шаблон страницы.
-Всё это можно посмотреть в файле <code>views.py</code>.
-{% endblock %}
 
 {% block content %}
 <div class="container px-4 py-5" id="stats">
@@ -44,6 +40,11 @@
             <h4>{{ words_min }}</h4>
             <p class="text-muted">минимум</p>
         </div>
+        <div class="col-sm-4">
+            <h4>{{ terms_with_transcription }}</h4>
+            <p class="text-muted">слов с транскрипцией</p>
+        </div>
+
     </div>
 </div>
 {% endblock %}

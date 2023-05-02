@@ -1,6 +1,7 @@
 word;transcription;translation;sourse
-cat;kæt;кошка;db
-cow;;корова;db
-dog;dɒɡ ;собака;db
-elephant;;слон;db
-rat;;крыса;Ира
+cat;kæt;кошка;user
+cow;;корова;user
+dog;dɒɡ ;собака;user
+elephant;;слон;user
+rat;;крыса;user
+tree;;дерево;user
