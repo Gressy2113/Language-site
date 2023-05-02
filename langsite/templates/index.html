@@ -27,9 +27,8 @@
                     background-size: cover
                     "
             >
-                <h3 class="fs-2">Список терминов</h3>
-                <p>Простая страница с контентом, который разложен в таблицу. Содержимое таблицы находится в текстовом
-                    файле (если вы уверенно себя чувствуете, замените текстовый файл на базу данных).</p>
+                <h3 class="fs-2">Словарь</h3>
+                <p>Здесь находится словарь добавленных слов</p>
                 <a href="/terms-list" class="btn btn-primary">Посмотреть</a>
             </div>
         </div>
@@ -49,11 +48,10 @@
                         "
 
             >
-                <h3 class="fs-2">Форма для заполнения термина</h3>
-                <p>Пример POST-запроса, который отправится после того, как вы заполните форму. Он допишет термин в ваш
-                    текстовый файл, и если всё будет успешно — вас перенаправят на страницу терминов</p>
+                <h3 class="fs-2">Форма для добавления слова</h3>
+                <p>Тут можно добавить слово в словарь</p>
                 <a href="/add-term" class="btn btn-primary">
-                    Заполнить
+                    Добавить
                 </a>
             </div>
         </div>
@@ -74,9 +72,33 @@
 
             >
                 <h3 class="fs-2">Статистика</h3>
-                <p>Сколько терминов уже есть? Какой они длины?</p>
+                <p>Сколько слов уже есть? Какой они длины?</p>
                 <a href="/stats" class="btn btn-primary">
                     Изучить
+                </a>
+            </div>
+        </div>
+
+        <div class="col d-flex">
+            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg class="bi" width="1em" height="1em">
+                    <use xlink:href="#cpu-fill"></use>
+                </svg>
+            </div>
+            <div
+                    class="bg-success p-2"
+                    style="bg-opacity-10;
+                        background-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%), url('https://img.freepik.com/premium-vector/london-city-scene-with-telephone-line-big-ben-architecture-hand-drawn-illustration_511296-272.jpg?w=1060');
+                        background-repeat: no-repeat;
+                        background-size: cover
+
+                        "
+
+            >
+                <h3 class="fs-2">Просмотр интерактивных карточек</h3>
+                <p>Тут можно выучить слова</p>
+                <a href="/term-flashcards" class="btn btn-primary">
+                    Учить
                 </a>
             </div>
         </div>

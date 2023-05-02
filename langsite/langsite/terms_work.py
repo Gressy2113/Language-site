@@ -3,10 +3,27 @@ def get_terms_for_table():
     with open("./data/terms.csv", "r", encoding="utf-8") as f:
         cnt = 1
         for line in f.readlines()[1:]:
-            term, definition, source = line.split(";")
-            terms.append([cnt, term, definition])
+            print(line)
+            term, transcription, translation = line.split(";")
+            terms.append([cnt, term, transcription, translation])
             cnt += 1
     return terms
+
+def get_terms_for_flashcards():
+    terms = []
+    with open("./data/terms.csv", "r", encoding="utf-8") as f:
+        i, j = 0, 0
+        for line in f.readlines()[1:]:
+            if i == 0:
+                terms.append([])
+            term, transcription, translation = line.split(";")
+            terms[i].append([term, transcription, translation])
+            j += 1
+            if j == 4:
+                i += 1
+                j = 0
+    return terms
+
 
 
 def write_term(new_term, new_definition):

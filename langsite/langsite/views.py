@@ -42,3 +42,8 @@ def send_term(request):
 def show_stats(request):
     stats = terms_work.get_terms_stats()
     return render(request, "stats.html", stats)
+
+def term_flashcards(request):
+    terms = terms_work.get_terms_for_flashcards()
+    return render(request, "term_flashcards.html", context={"terms": terms})
+
